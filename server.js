@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Array of users
 const users = [
     { id: 1, name: 'John', surname: 'Doe', age: 25, country: 'USA' },
     { id: 2, name: 'Pierre', surname: 'Dupont', age: 30, country: 'France' },
@@ -11,12 +10,10 @@ const users = [
     { id: 5, name: 'Olga', surname: 'Sydorenko', age: 35, country: 'Ukraine' }
 ];
 
-// Homepage route
 app.get('/', (req, res) => {
     res.send('<h1>Welcome!</h1><p>Use /users to see all users or /users/:id to get specific user data.</p>');
 });
 
-// Users list route
 app.get('/users', (req, res) => {
     let htmlResponse = '<h1>List of Users</h1><ul>';
     users.forEach(user => {
@@ -27,7 +24,6 @@ app.get('/users', (req, res) => {
 });
 
 
-// User information by ID
 app.get('/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const user = users.find(u => u.id === userId);
@@ -45,8 +41,6 @@ app.get('/users/:id', (req, res) => {
     }
 });
 
-
-// Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
