@@ -6,9 +6,9 @@ const port = 3000;
 const users = [
     { id: 1, name: 'John', surname: 'Doe', age: 25, country: 'USA' },
     { id: 2, name: 'Pierre', surname: 'Dupont', age: 30, country: 'France' },
-    { id: 3, name: 'Hans', surname: 'Müller', age: 40, country: 'Germany' },
-    { id: 4, name: 'Mateo', surname: 'González', age: 28, country: 'Spain' },
-    { id: 5, name: 'Olga', surname: 'Petrova', age: 35, country: 'Ukraine' }
+    { id: 3, name: 'Hans', surname: 'Muller', age: 40, country: 'Germany' },
+    { id: 4, name: 'Mateo', surname: 'Gonzalez', age: 28, country: 'Spain' },
+    { id: 5, name: 'Olga', surname: 'Sydorenko', age: 35, country: 'Ukraine' }
 ];
 
 // Homepage route
